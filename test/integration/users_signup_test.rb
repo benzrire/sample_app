@@ -13,7 +13,18 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
                                          password_confirmation: "bar" } }
     end
     assert_template 'users/new'
-    assert_select 'div#<CSS id for error explanation>'
-    assert_select 'div.<CSS class for field with error>'
+  end
+
+  test "valid signup information" do
+    get signup_path
+    assert_difference 'User.count', 1 do
+      post users_path, params: { user: { name:  "C vitt",
+                                         email: "cvitt@cvitt.cvitt",
+                                         password:              "123123",
+                                         password_confirmation: "123123" } }
+    end
+    follow_redirect!
+    assert_template 'users/show'
+    assert is_logged_in?
   end
 end
