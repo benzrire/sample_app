@@ -38,6 +38,9 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'faker'
 gem 'will_paginate',           '3.1.6'
 gem 'bootstrap-will_paginate', '1.0.0'
+gem 'pry'
+gem 'pry-remote'
+gem 'pry-nav'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
