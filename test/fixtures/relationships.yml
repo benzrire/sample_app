@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  follower: tangmo
+  followed: lana
+
+two:
+  follower: tangmo
+  followed: malory
+
+three:
+  follower: lana
+  followed: tangmo
+
+four:
+  follower: archer
+  followed: tangmo
